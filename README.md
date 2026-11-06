@@ -32,6 +32,20 @@ It runs programs: `rig` (found once via `zsh -ic 'command -v rig'`, then cached)
 and `tmux attach` in a new Herdr tab when you click a seat. It reads nothing
 outside its own folder.
 
+## Seats say "Not logged in" under a Bedrock/Vertex profile
+
+OpenRig starts seats from its daemon, which passes them only `CLAUDE_CONFIG_DIR`,
+not the provider variables a ccs profile exports (`CLAUDE_CODE_USE_BEDROCK`,
+`AWS_PROFILE`, ...). Ask Claude to "sync the ccs provider env" (skill
+`sync-ccs-provider-env`), or run it yourself:
+
+```bash
+bash skills/sync-ccs-provider-env/scripts/sync.sh --check   # report drift, change nothing
+bash skills/sync-ccs-provider-env/scripts/sync.sh           # copy them into the profile's settings.json env
+```
+
+Then relaunch the Claude seats. Details and caveats are in the skill.
+
 ## Requirements
 
 Herdr app installed and run once, and the OpenRig CLI (`rig`).
