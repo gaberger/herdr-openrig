@@ -1,0 +1,5 @@
+{
+  "name": "herdr-openrig",
+  "version": "0.1.0",
+  "description": "OpenRig panel for the Herdr app: a popup listing rigs and seats (cmd-shift-o). Ships the mod plus a skill that installs it."
+}
