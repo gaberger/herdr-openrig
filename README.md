@@ -44,7 +44,9 @@ bash skills/sync-ccs-provider-env/scripts/sync.sh --check   # report drift, chan
 bash skills/sync-ccs-provider-env/scripts/sync.sh           # copy them into the profile's settings.json env
 ```
 
-Then relaunch the Claude seats. Details and caveats are in the skill.
+Then relaunch the Claude seats. Details and caveats are in the skill. The companion skill
+`ccs-for-openrig-agents` teaches seat agents how ccs works (profiles, kits, where to add
+skills) and how to diagnose `Not logged in`.
 
 ## Requirements
 
